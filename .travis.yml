@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t koreshs/docker-react -f Dockerfile.dev .
+scripts:
+  -- docker run koresh/docker-react npm run test -- --coverage
